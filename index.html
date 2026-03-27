@@ -10,8 +10,18 @@
     />
   </head>
   <body>
+    <!-- github-pages-root-redirect:start -->
+    <script>
+      if (location.hostname.endsWith("github.io")) {
+        const docsUrl = new URL("./docs/", location.href);
+
+        if (location.pathname !== docsUrl.pathname) {
+          location.replace(docsUrl);
+        }
+      }
+    </script>
+    <!-- github-pages-root-redirect:end -->
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
-

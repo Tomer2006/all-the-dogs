@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" role="img" aria-labelledby="title desc">
+  <title id="title">Dog placeholder</title>
+  <desc id="desc">Stylized dog silhouette placeholder image.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#132537" />
+      <stop offset="100%" stop-color="#0a121c" />
+    </linearGradient>
+    <linearGradient id="dog" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#f1a15d" />
+      <stop offset="100%" stop-color="#ffcf96" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="640" fill="url(#bg)" rx="36" />
+  <circle cx="646" cy="126" r="88" fill="#1b3348" opacity=".55" />
+  <circle cx="132" cy="536" r="112" fill="#143042" opacity=".6" />
+  <path
+    fill="url(#dog)"
+    d="M239 435c-22 0-39-17-39-39v-74c0-57 46-103 103-103h52l58-72c13-15 35-20 53-10 18 9 27 29 22 48l-13 48h30c53 0 96 43 96 96v67c0 22-17 39-39 39h-17c-8-55-35-83-80-83-44 0-73 28-81 83h-78c-8-55-36-83-82-83s-73 28-81 83h-24z"
+  />
+  <circle cx="286" cy="435" r="53" fill="#08111a" />
+  <circle cx="465" cy="435" r="53" fill="#08111a" />
+  <circle cx="286" cy="435" r="23" fill="#f4ead9" />
+  <circle cx="465" cy="435" r="23" fill="#f4ead9" />
+  <text
+    x="400"
+    y="564"
+    fill="#f4ead9"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-size="34"
+    font-weight="700"
+    text-anchor="middle"
+    letter-spacing="3"
+  >
+    DOG IMAGE
+  </text>
+</svg>

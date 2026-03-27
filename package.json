@@ -7,7 +7,7 @@
     "generate:breeds": "node scripts/generate-wiki-dog-breeds.mjs",
     "localize:images": "node scripts/localize-breed-images.mjs",
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/sync-github-pages-build.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
