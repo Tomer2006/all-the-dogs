@@ -1,15 +1,7 @@
 import { useState } from "react";
 
-function resolveImagePath(path) {
-  if (!path || !path.startsWith("/")) {
-    return path;
-  }
-
-  return `${import.meta.env.BASE_URL}${path.slice(1)}`;
-}
-
 function getFallbackImage(index) {
-  return resolveImagePath("/images/dog-placeholder.svg");
+  return "/images/dog-placeholder.svg";
 }
 
 function formatWeightRange(breed) {
@@ -26,9 +18,7 @@ function formatWeightRange(breed) {
 
 export default function BreedCard({ breed, index }) {
   const fallbackImage = getFallbackImage(index);
-  const [imageSrc, setImageSrc] = useState(
-    resolveImagePath(breed.image) ?? fallbackImage,
-  );
+  const [imageSrc, setImageSrc] = useState(breed.image ?? fallbackImage);
 
   function handleImageError() {
     if (imageSrc !== fallbackImage) {
