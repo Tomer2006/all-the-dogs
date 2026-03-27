@@ -14,8 +14,8 @@ export const dogBreeds = [
   {
     name: "Africanis",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Africanis_%281%29.jpg/960px-Africanis_%281%29.jpg",
-    kgMin: 25,
-    kgMax: 45,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Aidi",
@@ -44,8 +44,8 @@ export const dogBreeds = [
   {
     name: "Aksaray Malaklisi",
     image: "https://upload.wikimedia.org/wikipedia/commons/3/31/Aksaray_malaklisi_beto.jpg",
-    kgMin: 75,
-    kgMax: 75,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Alano Español",
@@ -80,14 +80,14 @@ export const dogBreeds = [
   {
     name: "Alopekis",
     image: "https://upload.wikimedia.org/wikipedia/commons/a/aa/Alopekis_white_male.jpg",
-    kgMin: 7,
-    kgMax: 11,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Alpine Dachsbracke",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Alpejski_go%C5%84czy_kr%C3%B3tkono%C5%BCny_g99.jpg/960px-Alpejski_go%C5%84czy_kr%C3%B3tkono%C5%BCny_g99.jpg",
-    kgMin: 15,
-    kgMax: 18.1,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "American Bulldog",
@@ -110,8 +110,8 @@ export const dogBreeds = [
   {
     name: "American English Coonhound",
     image: "https://upload.wikimedia.org/wikipedia/commons/2/28/English_Coonhound.jpg",
-    kgMin: 18,
-    kgMax: 30,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "American Eskimo Dog",
@@ -266,32 +266,32 @@ export const dogBreeds = [
   {
     name: "Bắc Hà",
     image: "https://upload.wikimedia.org/wikipedia/commons/0/0a/B%E1%BA%AFc_H%C3%A0_dog_side.jpg",
-    kgMin: 22,
-    kgMax: 28,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Bakharwal",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Bakarwal.jpg/960px-Bakarwal.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 36.3,
+    kgMax: 59,
   },
   {
     name: "Banjara Hound",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Banjara_from_1915.JPG/960px-Banjara_from_1915.JPG",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 27.7,
+    kgMax: 31.8,
   },
   {
     name: "Bankhar Dog",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Hotosho-1.jpg/960px-Hotosho-1.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 50,
+    kgMax: 60,
   },
   {
     name: "Barak hound",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/BIR_Grupp_6-_BOSANSKI_OSTRODLAKI_GONIC-BARAK%2C_Sandy_%2823866392689%29.jpg/960px-BIR_Grupp_6-_BOSANSKI_OSTRODLAKI_GONIC-BARAK%2C_Sandy_%2823866392689%29.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 15.9,
+    kgMax: 29.5,
   },
   {
     name: "Barbado da Terceira",
@@ -356,8 +356,8 @@ export const dogBreeds = [
   {
     name: "Beagle-Harrier",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Beagle_harrier.JPG/960px-Beagle_harrier.JPG",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 19,
+    kgMax: 21,
   },
   {
     name: "Bearded Collie",
@@ -458,8 +458,8 @@ export const dogBreeds = [
   {
     name: "Blue Picardy Spaniel",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Epagneul_bleu_de_picardie_868.jpg/960px-Epagneul_bleu_de_picardie_868.jpg",
-    kgMin: 18.1,
-    kgMax: 20.4,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Bluetick Coonhound",
@@ -554,26 +554,26 @@ export const dogBreeds = [
   {
     name: "Braque d'Auvergne",
     image: "https://upload.wikimedia.org/wikipedia/commons/b/bb/Braque_d_Auvergne.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 25,
+    kgMax: 27,
   },
   {
     name: "Braque du Bourbonnais",
     image: "https://upload.wikimedia.org/wikipedia/commons/4/49/Braque_du_Bourbonnais.jpg",
-    kgMin: 15.9,
-    kgMax: 24.9,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Braque Français",
     image: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Wy%C5%BCe%C5%82_Gasko%C5%84ski.jpg",
-    kgMin: 18.1,
-    kgMax: 36.3,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Braque Saint-Germain",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Braque_saint-germain_666.jpg/960px-Braque_saint-germain_666.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 25,
+    kgMax: 27,
   },
   {
     name: "Brazilian Terrier",
@@ -596,8 +596,8 @@ export const dogBreeds = [
   {
     name: "Briquet Griffon Vendéen",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Briquet_Griffon_Vendeen.jpg/960px-Briquet_Griffon_Vendeen.jpg",
-    kgMin: 21.8,
-    kgMax: 24,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Brittany",
@@ -668,8 +668,8 @@ export const dogBreeds = [
   {
     name: "Burgos Pointer",
     image: "https://upload.wikimedia.org/wikipedia/commons/2/28/Burgos_Pointer_or_Perdiguero_de_Burgos.JPG",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 29,
+    kgMax: 30,
   },
   {
     name: "Ca de Bou",
@@ -722,8 +722,8 @@ export const dogBreeds = [
   {
     name: "Canaan Dog",
     image: "https://upload.wikimedia.org/wikipedia/commons/f/fe/CanaanDogChakede.jpg",
-    kgMin: 15.9,
-    kgMax: 24.9,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Canadian Eskimo Dog",
@@ -968,8 +968,8 @@ export const dogBreeds = [
   {
     name: "Croatian Sheepdog",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Gera062005sed.jpg/960px-Gera062005sed.jpg",
-    kgMin: 13.6,
-    kgMax: 20.4,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Curly-coated Retriever",
@@ -1010,8 +1010,8 @@ export const dogBreeds = [
   {
     name: "Danish–Swedish Farmdog",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Danish_Farm_Dog1604fxcr_wb.jpg/960px-Danish_Farm_Dog1604fxcr_wb.jpg",
-    kgMin: 6.8,
-    kgMax: 11.3,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Denmark Feist",
@@ -1082,8 +1082,8 @@ export const dogBreeds = [
   {
     name: "Dunker",
     image: "https://upload.wikimedia.org/wikipedia/commons/4/48/Dunker.jpg",
-    kgMin: 11.3,
-    kgMax: 18.1,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Dutch Shepherd",
@@ -1100,14 +1100,14 @@ export const dogBreeds = [
   {
     name: "East European Shepherd",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Vostochno_Evropeiskaya_Ovcharka.jpg/960px-Vostochno_Evropeiskaya_Ovcharka.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 50,
+    kgMax: 60,
   },
   {
     name: "East Siberian Laika",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/East_Siberian_Laika.jpg/960px-East_Siberian_Laika.jpg",
-    kgMin: 18.1,
-    kgMax: 22.7,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Ecuadorian Hairless Dog",
@@ -1118,14 +1118,14 @@ export const dogBreeds = [
   {
     name: "English Cocker Spaniel",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/%22Bill%22_-_Cocker_spaniel_anglais_2.JPG/960px-%22Bill%22_-_Cocker_spaniel_anglais_2.JPG",
-    kgMin: 11.8,
-    kgMax: 15.4,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "English Foxhound",
     image: "https://upload.wikimedia.org/wikipedia/commons/4/44/English_Foxhound_portrait.jpg",
-    kgMin: 24.9,
-    kgMax: 34,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "English Mastiff",
@@ -1160,8 +1160,8 @@ export const dogBreeds = [
   {
     name: "Entlebucher Mountain Dog",
     image: "https://upload.wikimedia.org/wikipedia/commons/f/ff/Elio_v_Schaerlig_im_Juni_2007_klein.jpg",
-    kgMin: 24.9,
-    kgMax: 29.9,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Erbi Txakur",
@@ -1172,8 +1172,8 @@ export const dogBreeds = [
   {
     name: "Estonian Hound",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Go%C5%84czy_esto%C5%84ski_MB_01.jpg/960px-Go%C5%84czy_esto%C5%84ski_MB_01.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 18,
+    kgMax: 20,
   },
   {
     name: "Estrela Mountain Dog",
@@ -1196,14 +1196,14 @@ export const dogBreeds = [
   {
     name: "Fila Brasileiro",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Fila_brasileiro_ppk9.jpg/960px-Fila_brasileiro_ppk9.jpg",
-    kgMin: 40.8,
-    kgMax: 81.6,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Finnish Hound",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Finnish_Hound.jpg/960px-Finnish_Hound.jpg",
-    kgMin: 20.4,
-    kgMax: 24.9,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Finnish Lapphund",
@@ -1220,8 +1220,8 @@ export const dogBreeds = [
   {
     name: "Flat-coated Retriever",
     image: "https://upload.wikimedia.org/wikipedia/commons/a/aa/Flat_Coated_Retriever_-_black.jpg",
-    kgMin: 27.2,
-    kgMax: 31.8,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "French Bulldog",
@@ -1244,8 +1244,8 @@ export const dogBreeds = [
   {
     name: "Gascon Saintongeois",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Isogascognesaintonge.jpg/960px-Isogascognesaintonge.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 32,
+    kgMax: 32,
   },
   {
     name: "Gaucho sheepdog",
@@ -1298,8 +1298,8 @@ export const dogBreeds = [
   {
     name: "German Spaniel",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Plochacz_niemiecki_2_pl.jpg/960px-Plochacz_niemiecki_2_pl.jpg",
-    kgMin: 18.1,
-    kgMax: 27.2,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "German Spitz",
@@ -1310,8 +1310,8 @@ export const dogBreeds = [
   {
     name: "German Wirehaired Pointer",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Dan_vom_hardenberg_%28cropped%29.jpg/960px-Dan_vom_hardenberg_%28cropped%29.jpg",
-    kgMin: 22.7,
-    kgMax: 31.8,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Giant Schnauzer",
@@ -1346,26 +1346,26 @@ export const dogBreeds = [
   {
     name: "Grand Anglo-Français Blanc et Noir",
     image: "https://upload.wikimedia.org/wikipedia/commons/5/53/Grand_anglo_francais_noir.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 29,
+    kgMax: 34,
   },
   {
     name: "Grand Anglo-Français Blanc et Orange",
     image: "https://upload.wikimedia.org/wikipedia/commons/e/e7/06101298_Grand_anglo_francais_orange.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 29,
+    kgMax: 34,
   },
   {
     name: "Grand Anglo-Français Tricolore",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Grand_anglo_francais_tricol.jpg/960px-Grand_anglo_francais_tricol.jpg",
-    kgMin: 34,
-    kgMax: 36.3,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Grand Basset Griffon Vendéen",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/GrandBassettGriffonVend%C3%A9en.jpg/960px-GrandBassettGriffonVend%C3%A9en.jpg",
-    kgMin: 18.1,
-    kgMax: 20.4,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Grand Bleu de Gascogne",
@@ -1376,8 +1376,8 @@ export const dogBreeds = [
   {
     name: "Grand Griffon Vendéen",
     image: "https://upload.wikimedia.org/wikipedia/commons/4/44/Grand_griffon_vend%C3%A9en_aka_Large_Vend%C3%A9en_Griffon.JPG",
-    kgMin: 27.2,
-    kgMax: 34,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Great Dane",
@@ -1388,8 +1388,8 @@ export const dogBreeds = [
   {
     name: "Greater Swiss Mountain Dog",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Greater_Swiss_Mountain_Dog_2018.jpg/960px-Greater_Swiss_Mountain_Dog_2018.jpg",
-    kgMin: 38.6,
-    kgMax: 63.5,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Greek Harehound",
@@ -1406,8 +1406,8 @@ export const dogBreeds = [
   {
     name: "Greenland Dog",
     image: "https://upload.wikimedia.org/wikipedia/commons/1/16/Greenland_Dog.jpg",
-    kgMin: 29.9,
-    kgMax: 45.4,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Greyhound",
@@ -1436,8 +1436,8 @@ export const dogBreeds = [
   {
     name: "Griffon Nivernais",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Griffon_nivernais.jpg/960px-Griffon_nivernais.jpg",
-    kgMin: 22.7,
-    kgMax: 24.9,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Gull Dong",
@@ -1466,14 +1466,14 @@ export const dogBreeds = [
   {
     name: "Hamiltonstövare",
     image: "https://upload.wikimedia.org/wikipedia/commons/5/52/Hamiltonstovare_600.jpg",
-    kgMin: 22.7,
-    kgMax: 27.2,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Hanover Hound",
     image: "https://upload.wikimedia.org/wikipedia/commons/7/76/Hannoverscher_Schweisshund.jpg",
-    kgMin: 36.3,
-    kgMax: 45.4,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Harrier",
@@ -1514,8 +1514,8 @@ export const dogBreeds = [
   {
     name: "Huntaway",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Huntaway.JPG/960px-Huntaway.JPG",
-    kgMin: 18.1,
-    kgMax: 36.3,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Hygen Hound",
@@ -1526,8 +1526,8 @@ export const dogBreeds = [
   {
     name: "Ibizan Hound",
     image: "https://upload.wikimedia.org/wikipedia/commons/e/ef/Podenco_z_ibizy_645.jpg",
-    kgMin: 20.4,
-    kgMax: 22.7,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Icelandic Sheepdog",
@@ -1568,8 +1568,8 @@ export const dogBreeds = [
   {
     name: "Irish Water Spaniel",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Ierse_Water_Spaniel.jpg/960px-Ierse_Water_Spaniel.jpg",
-    kgMin: 20.4,
-    kgMax: 29.5,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Irish Wolfhound",
@@ -1580,8 +1580,8 @@ export const dogBreeds = [
   {
     name: "Istrian Coarse-haired Hound",
     image: "https://upload.wikimedia.org/wikipedia/commons/5/50/Istrian_hound2.jpg",
-    kgMin: 11.3,
-    kgMax: 25.4,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Istrian Shorthaired Hound",
@@ -1676,8 +1676,8 @@ export const dogBreeds = [
   {
     name: "Kanni",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Kanni.jpg/960px-Kanni.jpg",
-    kgMin: 15.9,
-    kgMax: 21.8,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Karakachan",
@@ -1724,8 +1724,8 @@ export const dogBreeds = [
   {
     name: "Kerry Beagle",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Kerry_Beagle_from_1915.JPG/960px-Kerry_Beagle_from_1915.JPG",
-    kgMin: 22.7,
-    kgMax: 27.2,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Kerry Blue Terrier",
@@ -1754,8 +1754,8 @@ export const dogBreeds = [
   {
     name: "Kintamani",
     image: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Kintamani.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 15,
+    kgMax: 16.5,
   },
   {
     name: "Kishu",
@@ -1856,8 +1856,8 @@ export const dogBreeds = [
   {
     name: "Lakeland Terrier",
     image: "https://upload.wikimedia.org/wikipedia/commons/7/78/Lakeland_Terrier.jpg",
-    kgMin: 6.8,
-    kgMax: 7.7,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Lancashire Heeler",
@@ -1880,8 +1880,8 @@ export const dogBreeds = [
   {
     name: "Lapponian Herder",
     image: "https://upload.wikimedia.org/wikipedia/commons/d/d3/Lapskvallhund.jpg",
-    kgMin: 27.2,
-    kgMax: 29.9,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Large Münsterländer",
@@ -1928,14 +1928,14 @@ export const dogBreeds = [
   {
     name: "Löwchen",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Adult_Lowchen_Gaiting.jpg/960px-Adult_Lowchen_Gaiting.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 7,
+    kgMax: 8,
   },
   {
     name: "Lucas Terrier",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Typical_Lucas_Terriers.JPG/960px-Typical_Lucas_Terriers.JPG",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 8,
+    kgMax: 9,
   },
   {
     name: "Lupo Italiano",
@@ -1952,8 +1952,8 @@ export const dogBreeds = [
   {
     name: "Magyar Agár",
     image: "https://upload.wikimedia.org/wikipedia/commons/5/56/Magyar_ag%C3%A1r_male.jpg",
-    kgMin: 22.2,
-    kgMax: 30.8,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Mahratta Hound",
@@ -1976,8 +1976,8 @@ export const dogBreeds = [
   {
     name: "Manchester Terrier",
     image: "https://upload.wikimedia.org/wikipedia/commons/6/62/Mancherster_Terrier.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 3.5,
+    kgMax: 8,
   },
   {
     name: "Maneto",
@@ -2060,8 +2060,8 @@ export const dogBreeds = [
   {
     name: "Moscow Watchdog",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Moscow_watchdog_4.JPG/960px-Moscow_watchdog_4.JPG",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 58,
+    kgMax: 68,
   },
   {
     name: "Mountain Cur",
@@ -2138,14 +2138,14 @@ export const dogBreeds = [
   {
     name: "Norwegian Buhund",
     image: "https://upload.wikimedia.org/wikipedia/commons/3/3b/Norwegian_Buhund_600.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 15.9,
+    kgMax: 18.1,
   },
   {
     name: "Norwegian Elkhound",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Elkhound2020_%28cropped%29.jpg/960px-Elkhound2020_%28cropped%29.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 21.8,
+    kgMax: 24.9,
   },
   {
     name: "Norwegian Lundehund",
@@ -2174,8 +2174,8 @@ export const dogBreeds = [
   {
     name: "Old Danish Pointer",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Wy%C5%BCe%C5%82_du%C5%84ski_123.jpg/960px-Wy%C5%BCe%C5%82_du%C5%84ski_123.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 30,
+    kgMax: 35,
   },
   {
     name: "Old English Sheepdog",
@@ -2300,8 +2300,8 @@ export const dogBreeds = [
   {
     name: "Picardy Spaniel",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Epagneul_picard_685.jpg/960px-Epagneul_picard_685.jpg",
-    kgMin: 18.1,
-    kgMax: 24.9,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Plott Hound",
@@ -2324,8 +2324,8 @@ export const dogBreeds = [
   {
     name: "Podenco Canario",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Podenco_canario_hembra_%28cropped%29.jpg/960px-Podenco_canario_hembra_%28cropped%29.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 21,
+    kgMax: 25,
   },
   {
     name: "Podenco Valenciano",
@@ -2354,8 +2354,8 @@ export const dogBreeds = [
   {
     name: "Polish Hound",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/PolishHound-MlChPl-OKSANA-ZOstregoBoru-wl.JoannaZembrzuska_3.JPG/960px-PolishHound-MlChPl-OKSANA-ZOstregoBoru-wl.JoannaZembrzuska_3.JPG",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 26,
+    kgMax: 32,
   },
   {
     name: "Polish Lowland Sheepdog",
@@ -2384,8 +2384,8 @@ export const dogBreeds = [
   {
     name: "Porcelaine",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Porcelaine_2009_pl4.jpg/960px-Porcelaine_2009_pl4.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 27,
+    kgMax: 29,
   },
   {
     name: "Portuguese Podengo",
@@ -2408,20 +2408,20 @@ export const dogBreeds = [
   {
     name: "Portuguese Water Dog",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/C%C3%A3o_de_agua_Portugu%C3%AAs_2.jpg/960px-C%C3%A3o_de_agua_Portugu%C3%AAs_2.jpg",
-    kgMin: 15.9,
-    kgMax: 24.9,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Posavac Hound",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Posavac_hound_female_%28cropped%29.jpg/960px-Posavac_hound_female_%28cropped%29.jpg",
-    kgMin: 15.9,
-    kgMax: 20.4,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Pražský Krysařík",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Prague_Ratter.jpg/960px-Prague_Ratter.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 3,
+    kgMax: 3,
   },
   {
     name: "Presa Canario",
@@ -2432,8 +2432,8 @@ export const dogBreeds = [
   {
     name: "Pudelpointer",
     image: "https://upload.wikimedia.org/wikipedia/commons/0/05/Pudelpointer_on_point.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 27,
+    kgMax: 29,
   },
   {
     name: "Pug",
@@ -2552,8 +2552,8 @@ export const dogBreeds = [
   {
     name: "Rough Collie",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Rough-Collie-japan08_%28cropped%29.jpg/960px-Rough-Collie-japan08_%28cropped%29.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 29,
+    kgMax: 32,
   },
   {
     name: "Russian Spaniel",
@@ -2570,8 +2570,8 @@ export const dogBreeds = [
   {
     name: "Russo-European Laika",
     image: "https://upload.wikimedia.org/wikipedia/commons/8/83/Russo_European_Laika_2.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 15,
+    kgMax: 16,
   },
   {
     name: "Ryukyu",
@@ -2588,8 +2588,8 @@ export const dogBreeds = [
   {
     name: "Sabueso Español",
     image: "https://upload.wikimedia.org/wikipedia/commons/a/af/Angoi_de_A_Fonsagrada.JPG",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 10,
+    kgMax: 11,
   },
   {
     name: "Saint Miguel Cattle Dog",
@@ -2600,14 +2600,14 @@ export const dogBreeds = [
   {
     name: "Saint-Usuge Spaniel",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/EpagneuldeSaintUsuge.jpg/960px-EpagneuldeSaintUsuge.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 16,
+    kgMax: 16,
   },
   {
     name: "Sakhalin Husky",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Sakhalin_Husky_Jiro.JPG/960px-Sakhalin_Husky_Jiro.JPG",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 32,
+    kgMax: 40,
   },
   {
     name: "Saluki",
@@ -2624,8 +2624,8 @@ export const dogBreeds = [
   {
     name: "Sapsali",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Korea-Jeonju-Sapsal_dog_in_front_of_a_Hanok_Village-01.jpg/960px-Korea-Jeonju-Sapsal_dog_in_front_of_a_Hanok_Village-01.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 25,
+    kgMax: 27,
   },
   {
     name: "Sarabi",
@@ -2660,8 +2660,8 @@ export const dogBreeds = [
   {
     name: "Schillerstövare",
     image: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Schillerst%C3%B6vare_bearbeitet.jpg",
-    kgMin: 15.9,
-    kgMax: 24.9,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Schipperke",
@@ -2678,14 +2678,14 @@ export const dogBreeds = [
   {
     name: "Schweizer Laufhund",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Go%C5%84czy_szwajcarski_2009_pl2.jpg/960px-Go%C5%84czy_szwajcarski_2009_pl2.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 19,
+    kgMax: 20,
   },
   {
     name: "Schweizerischer Niederlaufhund",
     image: "https://upload.wikimedia.org/wikipedia/commons/c/c6/08115491_Schwyzer_Niederlaufhund.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 15,
+    kgMax: 16,
   },
   {
     name: "Scottish Deerhound",
@@ -2792,14 +2792,14 @@ export const dogBreeds = [
   {
     name: "Silken Windhound",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Fallon_the_Silken_Windhound.jpg/960px-Fallon_the_Silken_Windhound.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 20,
+    kgMax: 25,
   },
   {
     name: "Sinhala Hound",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Wilde_huendin_am_stillen.jpg/960px-Wilde_huendin_am_stillen.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 11,
+    kgMax: 12,
   },
   {
     name: "Skye Terrier",
@@ -2810,8 +2810,8 @@ export const dogBreeds = [
   {
     name: "Sloughi",
     image: "https://upload.wikimedia.org/wikipedia/commons/f/f5/Sloughi_male.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 23,
+    kgMax: 30,
   },
   {
     name: "Slovak Cuvac",
@@ -2828,14 +2828,14 @@ export const dogBreeds = [
   {
     name: "Slovenský kopov",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Go%C5%84czy_s%C5%82owacki_pl.jpg/960px-Go%C5%84czy_s%C5%82owacki_pl.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 20,
+    kgMax: 20,
   },
   {
     name: "Smaland Hound",
     image: "https://upload.wikimedia.org/wikipedia/commons/e/e0/Smaland-St%C3%B6vare.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 20,
+    kgMax: 20,
   },
   {
     name: "Small Međimurje Dog",
@@ -2846,8 +2846,8 @@ export const dogBreeds = [
   {
     name: "Small Münsterländer",
     image: "https://upload.wikimedia.org/wikipedia/commons/4/48/Kleiner_M%C3%BCnsterl%C3%A4nder.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 23,
+    kgMax: 27,
   },
   {
     name: "Smithfield",
@@ -2858,8 +2858,8 @@ export const dogBreeds = [
   {
     name: "Smooth Collie",
     image: "https://upload.wikimedia.org/wikipedia/commons/1/1c/SmoothCollie_TriColour.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 29,
+    kgMax: 32,
   },
   {
     name: "Smooth Fox Terrier",
@@ -2948,20 +2948,20 @@ export const dogBreeds = [
   {
     name: "Styrian Coarse-haired Hound",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Steirische_Rauhhaarbracke.jpg/960px-Steirische_Rauhhaarbracke.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 18,
+    kgMax: 20,
   },
   {
     name: "Sussex Spaniel",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Sussex_spaniel_t43.jpg/960px-Sussex_spaniel_t43.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 18,
+    kgMax: 20,
   },
   {
     name: "Swedish Lapphund",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Svensk_lapphund.JPG/960px-Svensk_lapphund.JPG",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 18,
+    kgMax: 20,
   },
   {
     name: "Swedish Vallhund",
@@ -2972,14 +2972,14 @@ export const dogBreeds = [
   {
     name: "Taigan",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Taigan.jpg/960px-Taigan.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 32,
+    kgMax: 34,
   },
   {
     name: "Taiwan Dog",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Dog_With_Yellow_Rapeseed_%28242833099%29.jpeg/960px-Dog_With_Yellow_Rapeseed_%28242833099%29.jpeg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 16,
+    kgMax: 18,
   },
   {
     name: "Tamaskan Dog",
@@ -3014,20 +3014,20 @@ export const dogBreeds = [
   {
     name: "Telomian",
     image: "https://upload.wikimedia.org/wikipedia/commons/8/89/Telomian.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 10,
+    kgMax: 12,
   },
   {
     name: "Tenterfield Terrier",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Tenterfieldterrier.jpg/960px-Tenterfieldterrier.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 4,
+    kgMax: 5,
   },
   {
     name: "Thai Bangkaew Dog",
     image: "https://upload.wikimedia.org/wikipedia/commons/d/da/%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%81%E0%B9%89%E0%B8%A7.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 18,
+    kgMax: 20,
   },
   {
     name: "Thai Ridgeback",
@@ -3068,8 +3068,8 @@ export const dogBreeds = [
   {
     name: "Tornjak",
     image: "https://upload.wikimedia.org/wikipedia/commons/6/6f/Bosniantornjak.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 40,
+    kgMax: 50,
   },
   {
     name: "Tosa",
@@ -3128,8 +3128,8 @@ export const dogBreeds = [
   {
     name: "Tyrolean Hound",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Tiroler_Bracke.jpg/960px-Tiroler_Bracke.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 23,
+    kgMax: 30,
   },
   {
     name: "Valdueza",
@@ -3152,8 +3152,8 @@ export const dogBreeds = [
   {
     name: "Villano de Las Encartaciones",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Zakur_billanoa_Oramaiztegin_%28cropped%29.JPG/960px-Zakur_billanoa_Oramaiztegin_%28cropped%29.JPG",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 34,
+    kgMax: 38,
   },
   {
     name: "Villanuco de Las Encartaciones",
@@ -3176,8 +3176,8 @@ export const dogBreeds = [
   {
     name: "Volpino Italiano",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Szpic_miniaturowy_Volpino_MWPR_Katowice_2008_%28cropped%29.JPG/960px-Szpic_miniaturowy_Volpino_MWPR_Katowice_2008_%28cropped%29.JPG",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 5.4,
+    kgMax: 7.3,
   },
   {
     name: "Weimaraner",
@@ -3194,8 +3194,8 @@ export const dogBreeds = [
   {
     name: "Welsh Sheepdog",
     image: "https://upload.wikimedia.org/wikipedia/commons/8/85/Welsh_Sheepdog.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 15,
+    kgMax: 16,
   },
   {
     name: "Welsh Springer Spaniel",
@@ -3206,8 +3206,8 @@ export const dogBreeds = [
   {
     name: "Welsh Terrier",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Terier_walijski_suka_2009_pl.jpg/960px-Terier_walijski_suka_2009_pl.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 10,
+    kgMax: 10,
   },
   {
     name: "West Country Harrier",
@@ -3224,20 +3224,20 @@ export const dogBreeds = [
   {
     name: "West Siberian Laika",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/West_Siberian_Laika.jpg/960px-West_Siberian_Laika.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 20,
+    kgMax: 23,
   },
   {
     name: "Westphalian Dachsbracke",
     image: "https://upload.wikimedia.org/wikipedia/commons/8/80/Westf%C3%A4lische_Dachsbracke.jpg",
-    kgMin: 13.6,
-    kgMax: 15.9,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Wetterhoun",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Fryzyjski_pies_wodny_u68.jpg/960px-Fryzyjski_pies_wodny_u68.jpg",
-    kgMin: 15,
-    kgMax: 20,
+    kgMin: null,
+    kgMax: null,
   },
   {
     name: "Whippet",
@@ -3278,8 +3278,8 @@ export const dogBreeds = [
   {
     name: "Xiasi Dog",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Xiasi_Quan_dog.jpg/960px-Xiasi_Quan_dog.jpg",
-    kgMin: null,
-    kgMax: null,
+    kgMin: 18,
+    kgMax: 23,
   },
   {
     name: "Xigou",
