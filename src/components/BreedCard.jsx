@@ -6,7 +6,7 @@ function getFallbackImage(index) {
 
 function formatWeightRange(breed) {
   if (breed.kgMin == null || breed.kgMax == null) {
-    return "KG range unavailable in current web sources";
+    return "Weight range unavailable";
   }
 
   if (breed.kgMin === breed.kgMax) {

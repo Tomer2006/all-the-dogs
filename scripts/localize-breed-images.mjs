@@ -81,7 +81,6 @@ async function downloadImage(entry) {
     return {
       ...entry,
       image: entry.image || placeholderPath,
-      imageSource: null,
     };
   }
 
@@ -96,7 +95,6 @@ async function downloadImage(entry) {
     return {
       ...entry,
       image: `/images/breeds/${fileName}`,
-      imageSource: sourceUrl,
     };
   } catch {
     // File does not exist yet, continue to download.
@@ -124,7 +122,6 @@ async function downloadImage(entry) {
   return {
     ...entry,
     image: `/images/breeds/${fileName}`,
-    imageSource: sourceUrl,
   };
 }
 
@@ -147,8 +144,7 @@ async function main() {
         failures.push(entry.name);
         localized[currentIndex] = {
           ...entry,
-          image: sourceUrlFor(entry),
-          imageSource: sourceUrlFor(entry),
+          image: placeholderPath,
         };
       }
     }
@@ -163,7 +159,6 @@ async function main() {
         "  {",
         `    name: "${escapeForJs(entry.name)}",`,
         `    image: ${entry.image ? `"${escapeForJs(entry.image)}"` : "null"},`,
-        `    imageSource: ${entry.imageSource ? `"${escapeForJs(entry.imageSource)}"` : "null"},`,
         `    kgMin: ${entry.kgMin ?? "null"},`,
         `    kgMax: ${entry.kgMax ?? "null"},`,
         "  },",
@@ -187,7 +182,6 @@ async function main() {
 function sourceUrlFor(entry) {
   return (
     manualImageOverrides[entry.name] ??
-    entry.imageSource ??
     (entry.image && !entry.image.startsWith("/") ? entry.image : null)
   );
 }
