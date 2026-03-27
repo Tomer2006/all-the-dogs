@@ -7,6 +7,7 @@ const LIST_URL = "https://en.wikipedia.org/wiki/List_of_dog_breeds";
 const IMAGE_BATCH_SIZE = 40;
 const CONTENT_BATCH_SIZE = 25;
 const PETGUIDE_CONCURRENCY = 8;
+const PETLUR_CONCURRENCY = 8;
 const SEARCH_CONCURRENCY = 6;
 
 function decodeHtml(value) {
@@ -465,6 +466,48 @@ function parsePetGuideWeight(html) {
   return buildWeightRange(values);
 }
 
+function parsePetlurWeight(html) {
+  const match = html.match(
+    /<th[^>]*>\s*Weight\s*<\/th>[\s\S]*?<td[^>]*>([\s\S]*?)<\/td>/i,
+  );
+
+  if (!match) {
+    return null;
+  }
+
+  const values = [];
+  const weightText = decodeHtml(match[1])
+    .replace(/<[^>]+>/g, " ")
+    .replace(/[–—−]/g, "-")
+    .replace(/\bto\b/gi, "-")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  for (const kgMatch of weightText.matchAll(
+    /(\d+(?:\.\d+)?)\s*(?:-|and)?\s*(\d+(?:\.\d+)?)?\s*kg\b/gi,
+  )) {
+    values.push(Number(kgMatch[1]));
+
+    if (kgMatch[2]) {
+      values.push(Number(kgMatch[2]));
+    }
+  }
+
+  if (values.length === 0) {
+    for (const lbMatch of weightText.matchAll(
+      /(\d+(?:\.\d+)?)\s*(?:-|and)?\s*(\d+(?:\.\d+)?)?\s*(?:lb|lbs|pounds?)\b/gi,
+    )) {
+      values.push(convertToKg(Number(lbMatch[1]), "lb"));
+
+      if (lbMatch[2]) {
+        values.push(convertToKg(Number(lbMatch[2]), "lb"));
+      }
+    }
+  }
+
+  return buildWeightRange(values);
+}
+
 function parseSearchWeight(snippet) {
   const normalized = decodeHtml(snippet)
     .replace(/<[^>]+>/g, " ")
@@ -602,6 +645,48 @@ async function fetchPetGuideFallbackWeights(entries) {
   return weights;
 }
 
+async function fetchPetlurFallbackWeights(entries) {
+  const weights = new Map();
+  let index = 0;
+
+  async function worker() {
+    while (index < entries.length) {
+      const currentIndex = index;
+      index += 1;
+      const entry = entries[currentIndex];
+      const url = `https://petlur.com/dog/breed/${slugify(entry.name)}`;
+
+      try {
+        const response = await fetch(url, {
+          headers: {
+            "user-agent":
+              "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+          },
+        });
+
+        if (!response.ok) {
+          continue;
+        }
+
+        const html = await response.text();
+        const range = parsePetlurWeight(html);
+
+        if (range) {
+          weights.set(entry.page, range);
+        }
+      } catch {
+        // Ignore failed fallback fetches and keep the breed unresolved.
+      }
+    }
+  }
+
+  await Promise.all(
+    Array.from({ length: PETLUR_CONCURRENCY }, () => worker()),
+  );
+
+  return weights;
+}
+
 async function fetchWeightRanges(entries) {
   const candidateTitles = [
     ...new Set(
@@ -677,6 +762,19 @@ async function fetchWeightRanges(entries) {
 
   for (const entry of finalUnresolvedEntries) {
     const fallback = petGuideWeights.get(entry.page);
+
+    if (fallback) {
+      weightRanges.set(entry.page, fallback);
+    }
+  }
+
+  const petlurUnresolvedEntries = entries.filter(
+    (entry) => !weightRanges.get(entry.page),
+  );
+  const petlurWeights = await fetchPetlurFallbackWeights(petlurUnresolvedEntries);
+
+  for (const entry of petlurUnresolvedEntries) {
+    const fallback = petlurWeights.get(entry.page);
 
     if (fallback) {
       weightRanges.set(entry.page, fallback);
