@@ -1,0 +1,32 @@
+{
+  "Bakharwal": {
+    "kgMin": 36.3,
+    "kgMax": 59,
+    "source": "https://petlur.com/dog/breed/bakharwal-dog"
+  },
+  "Banjara Hound": {
+    "kgMin": 27.7,
+    "kgMax": 31.8,
+    "source": "https://en.wikipedia.org/wiki/Banjara_Hound"
+  },
+  "Bankhar Dog": {
+    "kgMin": 50,
+    "kgMax": 60,
+    "source": "https://www.nahf.org/article/bankhar-dog"
+  },
+  "Barak hound": {
+    "kgMin": 15.9,
+    "kgMax": 29.5,
+    "source": "https://thedogman.net/what-is-the-weight-of-a-barak-hound/"
+  },
+  "Beagle-Harrier": {
+    "kgMin": 19,
+    "kgMax": 21,
+    "source": "https://en.wikipedia.org/wiki/Beagle-Harrier"
+  },
+  "Bohemian Spotted Dog": {
+    "kgMin": 45.4,
+    "kgMax": 90.7,
+    "source": "https://www.nahf.org/article/bohemian-spotted-dog"
+  }
+}

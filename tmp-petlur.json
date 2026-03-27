@@ -1,0 +1,262 @@
+{
+  "Braque d'Auvergne": {
+    "kgMin": 25,
+    "kgMax": 27,
+    "source": "https://petlur.com/dog/breed/braque-d-auvergne"
+  },
+  "Braque Saint-Germain": {
+    "kgMin": 25,
+    "kgMax": 27,
+    "source": "https://petlur.com/dog/breed/braque-saint-germain"
+  },
+  "Burgos Pointer": {
+    "kgMin": 29,
+    "kgMax": 30,
+    "source": "https://petlur.com/dog/breed/burgos-pointer"
+  },
+  "Český fousek": {
+    "kgMin": 28,
+    "kgMax": 34,
+    "source": "https://petlur.com/dog/breed/cesky-fousek"
+  },
+  "East European Shepherd": {
+    "kgMin": 50,
+    "kgMax": 60,
+    "source": "https://petlur.com/dog/breed/east-european-shepherd"
+  },
+  "Estonian Hound": {
+    "kgMin": 18,
+    "kgMax": 20,
+    "source": "https://petlur.com/dog/breed/estonian-hound"
+  },
+  "Gascon Saintongeois": {
+    "kgMin": 32,
+    "kgMax": 32,
+    "source": "https://petlur.com/dog/breed/gascon-saintongeois"
+  },
+  "Grand Anglo-Français Blanc et Noir": {
+    "kgMin": 29,
+    "kgMax": 34,
+    "source": "https://petlur.com/dog/breed/grand-anglo-francais-blanc-et-noir"
+  },
+  "Grand Anglo-Français Blanc et Orange": {
+    "kgMin": 29,
+    "kgMax": 34,
+    "source": "https://petlur.com/dog/breed/grand-anglo-francais-blanc-et-orange"
+  },
+  "Kintamani": {
+    "kgMin": 15,
+    "kgMax": 16.5,
+    "source": "https://petlur.com/dog/breed/kintamani"
+  },
+  "Löwchen": {
+    "kgMin": 7,
+    "kgMax": 8,
+    "source": "https://petlur.com/dog/breed/lowchen"
+  },
+  "Lucas Terrier": {
+    "kgMin": 8,
+    "kgMax": 9,
+    "source": "https://petlur.com/dog/breed/lucas-terrier"
+  },
+  "Manchester Terrier": {
+    "kgMin": 3.5,
+    "kgMax": 8,
+    "source": "https://petlur.com/dog/breed/manchester-terrier"
+  },
+  "Moscow Watchdog": {
+    "kgMin": 58,
+    "kgMax": 68,
+    "source": "https://petlur.com/dog/breed/moscow-watchdog"
+  },
+  "Norwegian Buhund": {
+    "kgMin": 16,
+    "kgMax": 18,
+    "source": "https://petlur.com/dog/breed/norwegian-buhund"
+  },
+  "Norwegian Elkhound": {
+    "kgMin": 25,
+    "kgMax": 27,
+    "source": "https://petlur.com/dog/breed/norwegian-elkhound"
+  },
+  "Old Danish Pointer": {
+    "kgMin": 30,
+    "kgMax": 35,
+    "source": "https://petlur.com/dog/breed/old-danish-pointer"
+  },
+  "Podenco Canario": {
+    "kgMin": 21,
+    "kgMax": 25,
+    "source": "https://petlur.com/dog/breed/podenco-canario"
+  },
+  "Polish Hound": {
+    "kgMin": 26,
+    "kgMax": 32,
+    "source": "https://petlur.com/dog/breed/polish-hound"
+  },
+  "Porcelaine": {
+    "kgMin": 27,
+    "kgMax": 29,
+    "source": "https://petlur.com/dog/breed/porcelaine"
+  },
+  "Pražský Krysařík": {
+    "kgMin": 3,
+    "kgMax": 3,
+    "source": "https://petlur.com/dog/breed/prazsky-krysarik"
+  },
+  "Pudelpointer": {
+    "kgMin": 27,
+    "kgMax": 29,
+    "source": "https://petlur.com/dog/breed/pudelpointer"
+  },
+  "Rough Collie": {
+    "kgMin": 29,
+    "kgMax": 32,
+    "source": "https://petlur.com/dog/breed/rough-collie"
+  },
+  "Russo-European Laika": {
+    "kgMin": 15,
+    "kgMax": 16,
+    "source": "https://petlur.com/dog/breed/russo-european-laika"
+  },
+  "Sabueso Español": {
+    "kgMin": 10,
+    "kgMax": 11,
+    "source": "https://petlur.com/dog/breed/sabueso-espanol"
+  },
+  "Saint-Usuge Spaniel": {
+    "kgMin": 16,
+    "kgMax": 16,
+    "source": "https://petlur.com/dog/breed/saint-usuge-spaniel"
+  },
+  "Sakhalin Husky": {
+    "kgMin": 32,
+    "kgMax": 40,
+    "source": "https://petlur.com/dog/breed/sakhalin-husky"
+  },
+  "Sapsali": {
+    "kgMin": 25,
+    "kgMax": 27,
+    "source": "https://petlur.com/dog/breed/sapsali"
+  },
+  "Schweizer Laufhund": {
+    "kgMin": 19,
+    "kgMax": 20,
+    "source": "https://petlur.com/dog/breed/schweizer-laufhund"
+  },
+  "Schweizerischer Niederlaufhund": {
+    "kgMin": 15,
+    "kgMax": 16,
+    "source": "https://petlur.com/dog/breed/schweizerischer-niederlaufhund"
+  },
+  "Silken Windhound": {
+    "kgMin": 20,
+    "kgMax": 25,
+    "source": "https://petlur.com/dog/breed/silken-windhound"
+  },
+  "Sinhala Hound": {
+    "kgMin": 11,
+    "kgMax": 12,
+    "source": "https://petlur.com/dog/breed/sinhala-hound"
+  },
+  "Sloughi": {
+    "kgMin": 23,
+    "kgMax": 30,
+    "source": "https://petlur.com/dog/breed/sloughi"
+  },
+  "Slovenský kopov": {
+    "kgMin": 20,
+    "kgMax": 20,
+    "source": "https://petlur.com/dog/breed/slovensky-kopov"
+  },
+  "Smaland Hound": {
+    "kgMin": 20,
+    "kgMax": 20,
+    "source": "https://petlur.com/dog/breed/smaland-hound"
+  },
+  "Small Münsterländer": {
+    "kgMin": 23,
+    "kgMax": 27,
+    "source": "https://petlur.com/dog/breed/small-munsterlander"
+  },
+  "Smooth Collie": {
+    "kgMin": 29,
+    "kgMax": 32,
+    "source": "https://petlur.com/dog/breed/smooth-collie"
+  },
+  "Styrian Coarse-haired Hound": {
+    "kgMin": 18,
+    "kgMax": 20,
+    "source": "https://petlur.com/dog/breed/styrian-coarse-haired-hound"
+  },
+  "Sussex Spaniel": {
+    "kgMin": 18,
+    "kgMax": 20,
+    "source": "https://petlur.com/dog/breed/sussex-spaniel"
+  },
+  "Swedish Lapphund": {
+    "kgMin": 18,
+    "kgMax": 20,
+    "source": "https://petlur.com/dog/breed/swedish-lapphund"
+  },
+  "Taigan": {
+    "kgMin": 32,
+    "kgMax": 34,
+    "source": "https://petlur.com/dog/breed/taigan"
+  },
+  "Taiwan Dog": {
+    "kgMin": 16,
+    "kgMax": 18,
+    "source": "https://petlur.com/dog/breed/taiwan-dog"
+  },
+  "Telomian": {
+    "kgMin": 10,
+    "kgMax": 12,
+    "source": "https://petlur.com/dog/breed/telomian"
+  },
+  "Tenterfield Terrier": {
+    "kgMin": 4,
+    "kgMax": 5,
+    "source": "https://petlur.com/dog/breed/tenterfield-terrier"
+  },
+  "Thai Bangkaew Dog": {
+    "kgMin": 18,
+    "kgMax": 20,
+    "source": "https://petlur.com/dog/breed/thai-bangkaew-dog"
+  },
+  "Tornjak": {
+    "kgMin": 40,
+    "kgMax": 50,
+    "source": "https://petlur.com/dog/breed/tornjak"
+  },
+  "Tyrolean Hound": {
+    "kgMin": 23,
+    "kgMax": 30,
+    "source": "https://petlur.com/dog/breed/tyrolean-hound"
+  },
+  "Villano de Las Encartaciones": {
+    "kgMin": 34,
+    "kgMax": 38,
+    "source": "https://petlur.com/dog/breed/villano-de-las-encartaciones"
+  },
+  "Welsh Sheepdog": {
+    "kgMin": 15,
+    "kgMax": 16,
+    "source": "https://petlur.com/dog/breed/welsh-sheepdog"
+  },
+  "Welsh Terrier": {
+    "kgMin": 10,
+    "kgMax": 10,
+    "source": "https://petlur.com/dog/breed/welsh-terrier"
+  },
+  "West Siberian Laika": {
+    "kgMin": 20,
+    "kgMax": 23,
+    "source": "https://petlur.com/dog/breed/west-siberian-laika"
+  },
+  "Xiasi Dog": {
+    "kgMin": 18,
+    "kgMax": 23,
+    "source": "https://petlur.com/dog/breed/xiasi-dog"
+  }
+}

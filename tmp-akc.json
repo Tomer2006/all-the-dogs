@@ -1,0 +1,17 @@
+{
+  "Norwegian Buhund": {
+    "kgMin": 15.9,
+    "kgMax": 18.1,
+    "source": "https://www.akc.org/dog-breeds/norwegian-buhund/"
+  },
+  "Norwegian Elkhound": {
+    "kgMin": 21.8,
+    "kgMax": 24.9,
+    "source": "https://www.akc.org/dog-breeds/norwegian-elkhound/"
+  },
+  "Volpino Italiano": {
+    "kgMin": 5.4,
+    "kgMax": 7.3,
+    "source": "https://www.akc.org/dog-breeds/volpino-italiano/"
+  }
+}
