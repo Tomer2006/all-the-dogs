@@ -1,8 +1,9 @@
-import { access, mkdir, writeFile } from "node:fs/promises";
+import { access, mkdir, readdir, rm, writeFile } from "node:fs/promises";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import sharp from "sharp";
 import { dogBreeds } from "../src/data/dogBreeds.js";
 import { manualImageOverrides } from "../src/data/manualImageOverrides.js";
 
@@ -27,34 +28,6 @@ function escapeForJs(value) {
   return value.replaceAll("\\", "\\\\").replaceAll('"', '\\"');
 }
 
-function extensionFromContentType(contentType) {
-  if (!contentType) {
-    return null;
-  }
-
-  if (contentType.includes("image/jpeg")) {
-    return "jpg";
-  }
-
-  if (contentType.includes("image/png")) {
-    return "png";
-  }
-
-  if (contentType.includes("image/webp")) {
-    return "webp";
-  }
-
-  if (contentType.includes("image/svg+xml")) {
-    return "svg";
-  }
-
-  if (contentType.includes("image/gif")) {
-    return "gif";
-  }
-
-  return null;
-}
-
 function extensionFromUrl(url) {
   try {
     const pathname = new URL(url).pathname.toLowerCase();
@@ -75,7 +48,42 @@ function extensionFromUrl(url) {
 }
 
 async function downloadImage(entry) {
+  const baseName = slugify(entry.name);
+  const localFileName = `${baseName}.webp`;
+  const localPath = path.join(breedsDir, localFileName);
+  const existingLocalPath =
+    entry.image?.startsWith("/images/breeds/")
+      ? path.join(projectRoot, "public", ...entry.image.split("/").filter(Boolean))
+      : null;
   const sourceUrl = sourceUrlFor(entry);
+
+  try {
+    await access(localPath);
+
+    return {
+      ...entry,
+      image: `/images/breeds/${localFileName}`,
+    };
+  } catch {
+    // File does not exist yet, continue to download.
+  }
+
+  if (existingLocalPath && existingLocalPath !== localPath) {
+    try {
+      await access(existingLocalPath);
+      await sharp(existingLocalPath)
+        .rotate()
+        .webp({ quality: 82 })
+        .toFile(localPath);
+
+      return {
+        ...entry,
+        image: `/images/breeds/${localFileName}`,
+      };
+    } catch {
+      // Local source file is missing or unreadable, fall through to remote source.
+    }
+  }
 
   if (!sourceUrl) {
     return {
@@ -84,21 +92,8 @@ async function downloadImage(entry) {
     };
   }
 
-  const baseName = slugify(entry.name);
-  const extension = extensionFromUrl(sourceUrl) ?? "jpg";
-  const fileName = `${baseName}.${extension}`;
-  const localPath = path.join(breedsDir, fileName);
-
-  try {
-    await access(localPath);
-
-    return {
-      ...entry,
-      image: `/images/breeds/${fileName}`,
-    };
-  } catch {
-    // File does not exist yet, continue to download.
-  }
+  const tempExtension = extensionFromUrl(sourceUrl) ?? "img";
+  const tempPath = path.join(breedsDir, `${baseName}.download.${tempExtension}`);
 
   await execFileAsync("curl.exe", [
     "-L",
@@ -115,14 +110,40 @@ async function downloadImage(entry) {
     "--retry-delay",
     "2",
     "--output",
-    localPath,
+    tempPath,
     sourceUrl,
   ]);
 
-  return {
-    ...entry,
-    image: `/images/breeds/${fileName}`,
-  };
+  try {
+    await sharp(tempPath)
+      .rotate()
+      .webp({ quality: 82 })
+      .toFile(localPath);
+
+    return {
+      ...entry,
+      image: `/images/breeds/${localFileName}`,
+    };
+  } finally {
+    await rm(tempPath, { force: true });
+  }
+}
+
+async function removeStaleBreedFiles(localized) {
+  const expectedFiles = new Set(
+    localized
+      .map((entry) => entry.image)
+      .filter((image) => image?.startsWith("/images/breeds/"))
+      .map((image) => image.replace("/images/breeds/", "")),
+  );
+
+  const files = await readdir(breedsDir);
+
+  await Promise.all(
+    files
+      .filter((file) => !expectedFiles.has(file))
+      .map((file) => rm(path.join(breedsDir, file), { force: true })),
+  );
 }
 
 async function main() {
@@ -151,6 +172,7 @@ async function main() {
   }
 
   await Promise.all(Array.from({ length: CONCURRENCY }, () => worker()));
+  await removeStaleBreedFiles(localized);
 
   const output = [
     "export const dogBreeds = [",
