@@ -70,11 +70,6 @@ export default function App() {
               />
             </label>
 
-            <div className="mt-8 flex flex-wrap gap-3">
-              <div className="rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-ink shadow-sm">
-                {dogBreeds.length} breeds
-              </div>
-            </div>
           </div>
         </section>
 
