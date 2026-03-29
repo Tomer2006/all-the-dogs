@@ -2,10 +2,6 @@ import { useState } from "react";
 import BreedCard from "./components/BreedCard";
 import { dogBreeds } from "./data/dogBreeds";
 
-const alphabet = [
-  "All",
-  ...new Set(dogBreeds.map((breed) => breed.name.charAt(0).toUpperCase())),
-];
 const knownMaxKg = Math.ceil(
   Math.max(...dogBreeds.map((breed) => breed.kgMax ?? 0), 0),
 );
@@ -19,7 +15,6 @@ const knownMinKg = Math.floor(
 
 export default function App() {
   const [query, setQuery] = useState("");
-  const [activeLetter, setActiveLetter] = useState("All");
   const [minKg, setMinKg] = useState(knownMinKg);
   const [maxKg, setMaxKg] = useState(knownMaxKg);
 
@@ -28,9 +23,6 @@ export default function App() {
     const matchesQuery =
       normalizedQuery.length === 0 ||
       breed.name.toLowerCase().includes(normalizedQuery);
-
-    const matchesLetter =
-      activeLetter === "All" || breed.name.startsWith(activeLetter);
 
     const hasActiveWeightFilter = minKg !== knownMinKg || maxKg !== knownMaxKg;
     const hasKnownWeight =
@@ -42,7 +34,7 @@ export default function App() {
       !hasActiveWeightFilter ||
       (hasKnownWeight && breed.kgMin >= minKg && breed.kgMax <= maxKg);
 
-    return matchesQuery && matchesLetter && matchesWeight;
+    return matchesQuery && matchesWeight;
   });
 
   return (
@@ -80,7 +72,7 @@ export default function App() {
                 Browse breeds
               </p>
               <h2 className="mt-2 font-display text-3xl text-ink">
-                Filter or jump by letter
+                Filter breeds
               </h2>
             </div>
           </div>
@@ -138,38 +130,16 @@ export default function App() {
             </div>
           </div>
 
-          <div className="mt-6 flex flex-wrap gap-2">
-            {alphabet.map((letter) => {
-              const isActive = activeLetter === letter;
-
-              return (
-                <button
-                  key={letter}
-                  type="button"
-                  onClick={() => setActiveLetter(letter)}
-                  className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
-                    isActive
-                      ? "bg-bark text-paper"
-                      : "border border-white/10 bg-paper/70 text-ink hover:border-bark/40 hover:text-bark"
-                  }`}
-                >
-                  {letter}
-                </button>
-              );
-            })}
-          </div>
-
           <div className="mt-6 flex items-center justify-between gap-3">
             <p className="text-sm text-ink/65">
               Showing <span className="font-semibold text-ink">{visibleBreeds.length}</span>{" "}
               breeds
             </p>
-            {activeLetter !== "All" || query || minKg !== knownMinKg || maxKg !== knownMaxKg ? (
+            {query || minKg !== knownMinKg || maxKg !== knownMaxKg ? (
               <button
                 type="button"
                 onClick={() => {
                   setQuery("");
-                  setActiveLetter("All");
                   setMinKg(knownMinKg);
                   setMaxKg(knownMaxKg);
                 }}
