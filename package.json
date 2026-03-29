@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "generate:breeds": "node scripts/generate-wiki-dog-breeds.mjs",
+    "sync:lifespans": "node scripts/sync-breed-lifespans.mjs",
     "localize:images": "node scripts/localize-breed-images.mjs",
     "dev": "vite",
     "build": "vite build",

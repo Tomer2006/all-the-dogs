@@ -2,6 +2,12 @@ import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { manualWeightOverrides } from "../src/data/manualWeightOverrides.js";
+import {
+  buildSexedLifeSpanFields,
+  escapeForJs,
+  fetchCsvLifeSpanRanges,
+  getLifeSpanRangeForBreed,
+} from "./lib/lifeSpanRanges.mjs";
 
 const LIST_URL = "https://en.wikipedia.org/wiki/List_of_dog_breeds";
 const IMAGE_BATCH_SIZE = 40;
@@ -22,10 +28,6 @@ function decodeHtml(value) {
     .replace(/&lt;/g, "<")
     .replace(/&gt;/g, ">")
     .replace(/&nbsp;/g, " ");
-}
-
-function escapeForJs(value) {
-  return value.replaceAll("\\", "\\\\").replaceAll('"', '\\"');
 }
 
 function stripTags(value) {
@@ -789,11 +791,21 @@ async function main() {
   const entries = extractBreedEntries(html);
   const images = await fetchImages(entries);
   const weightRanges = await fetchWeightRanges(entries);
+  const csvLifeSpanRanges = await fetchCsvLifeSpanRanges();
   const outputLines = [
     "export const dogBreeds = [",
     ...entries.map((entry) => {
       const image = images.get(entry.page) ?? null;
       const weightRange = weightRanges.get(entry.page);
+      const lifeSpanRange = getLifeSpanRangeForBreed(
+        {
+          name: entry.name,
+          kgMin: weightRange?.kgMin ?? null,
+          kgMax: weightRange?.kgMax ?? null,
+        },
+        csvLifeSpanRanges,
+      );
+      const sexedFields = buildSexedLifeSpanFields(lifeSpanRange);
 
       return [
         "  {",
@@ -801,6 +813,10 @@ async function main() {
         `    image: ${image ? `"${escapeForJs(image)}"` : "null"},`,
         `    kgMin: ${weightRange ? weightRange.kgMin : "null"},`,
         `    kgMax: ${weightRange ? weightRange.kgMax : "null"},`,
+        `    maleLifeSpanMin: ${sexedFields.maleLifeSpanMin},`,
+        `    maleLifeSpanMax: ${sexedFields.maleLifeSpanMax},`,
+        `    femaleLifeSpanMin: ${sexedFields.femaleLifeSpanMin},`,
+        `    femaleLifeSpanMax: ${sexedFields.femaleLifeSpanMax},`,
         "  },",
       ].join("\n");
     }),

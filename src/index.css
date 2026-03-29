@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .weight-number-input {
+    @apply rounded-full border border-white/15 bg-paper/90 px-3 py-1 text-ink shadow-sm outline-none transition;
+    color-scheme: dark;
+  }
+}
+
 @layer base {
   :root {
     color: #f5ead7;

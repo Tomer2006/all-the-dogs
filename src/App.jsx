@@ -2,6 +2,8 @@ import { useState } from "react";
 import BreedCard from "./components/BreedCard";
 import { dogBreeds } from "./data/dogBreeds";
 
+const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+
 const knownMaxKg = Math.ceil(
   Math.max(...dogBreeds.map((breed) => breed.kgMax ?? 0), 0),
 );
@@ -18,6 +20,18 @@ export default function App() {
   const [minKg, setMinKg] = useState(knownMinKg);
   const [maxKg, setMaxKg] = useState(knownMaxKg);
 
+  const updateMinKg = (nextValue) => {
+    const safeMin = clamp(nextValue, knownMinKg, knownMaxKg);
+    setMinKg(safeMin);
+    setMaxKg((currentMax) => Math.max(currentMax, safeMin));
+  };
+
+  const updateMaxKg = (nextValue) => {
+    const safeMax = clamp(nextValue, knownMinKg, knownMaxKg);
+    setMaxKg(safeMax);
+    setMinKg((currentMin) => Math.min(currentMin, safeMax));
+  };
+
   const normalizedQuery = query.trim().toLowerCase();
   const visibleBreeds = dogBreeds.filter((breed) => {
     const matchesQuery =
@@ -31,8 +45,7 @@ export default function App() {
       breed.kgMax !== null &&
       breed.kgMax !== undefined;
     const matchesWeight =
-      !hasActiveWeightFilter ||
-      (hasKnownWeight && breed.kgMin >= minKg && breed.kgMax <= maxKg);
+      !hasActiveWeightFilter || (hasKnownWeight && breed.kgMax >= minKg && breed.kgMin <= maxKg);
 
     return matchesQuery && matchesWeight;
   });
@@ -86,6 +99,9 @@ export default function App() {
                 <h3 className="mt-1 font-display text-2xl text-ink">
                   Show breeds from {minKg} kg to {maxKg} kg
                 </h3>
+                <p className="mt-2 text-sm text-ink/65">
+                  Matches any breed whose weight range overlaps your selected range.
+                </p>
               </div>
 
               <div className="w-full max-w-xl">
@@ -93,9 +109,15 @@ export default function App() {
                   <label className="block">
                     <div className="mb-2 flex items-center justify-between text-sm font-medium text-ink/70">
                       <span>Minimum size</span>
-                      <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-ink shadow-sm">
-                        {minKg} kg
-                      </span>
+                      <input
+                        type="number"
+                        min={knownMinKg}
+                        max={knownMaxKg}
+                        step="1"
+                        value={minKg}
+                        onChange={(event) => updateMinKg(Number(event.target.value))}
+                        className="weight-number-input w-24 text-right focus:border-moss focus:ring-2 focus:ring-moss/20"
+                      />
                     </div>
                     <input
                       type="range"
@@ -103,7 +125,7 @@ export default function App() {
                       max={maxKg}
                       step="1"
                       value={minKg}
-                      onChange={(event) => setMinKg(Number(event.target.value))}
+                      onChange={(event) => updateMinKg(Number(event.target.value))}
                       className="h-3 w-full cursor-pointer appearance-none rounded-full bg-white accent-moss"
                     />
                   </label>
@@ -111,9 +133,15 @@ export default function App() {
                   <label className="block">
                     <div className="mb-2 flex items-center justify-between text-sm font-medium text-ink/70">
                       <span>Maximum size</span>
-                      <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-ink shadow-sm">
-                        {maxKg} kg
-                      </span>
+                      <input
+                        type="number"
+                        min={knownMinKg}
+                        max={knownMaxKg}
+                        step="1"
+                        value={maxKg}
+                        onChange={(event) => updateMaxKg(Number(event.target.value))}
+                        className="weight-number-input w-24 text-right focus:border-bark focus:ring-2 focus:ring-bark/20"
+                      />
                     </div>
                     <input
                       type="range"
@@ -121,7 +149,7 @@ export default function App() {
                       max={knownMaxKg}
                       step="1"
                       value={maxKg}
-                      onChange={(event) => setMaxKg(Number(event.target.value))}
+                      onChange={(event) => updateMaxKg(Number(event.target.value))}
                       className="h-3 w-full cursor-pointer appearance-none rounded-full bg-white accent-bark"
                     />
                   </label>
