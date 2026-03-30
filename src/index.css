@@ -4,8 +4,90 @@
 
 @layer components {
   .weight-number-input {
-    @apply rounded-full border border-white/15 bg-paper/90 px-3 py-1 text-ink shadow-sm outline-none transition;
+    @apply bg-transparent px-0 py-0 text-ink outline-none transition;
     color-scheme: dark;
+  }
+
+  .weight-number-wrap {
+    @apply inline-flex items-center gap-2 rounded-2xl border border-white/15 bg-paper/95 px-3 py-2 text-ink shadow-sm transition;
+  }
+
+  .weight-number-unit {
+    @apply text-xs font-semibold uppercase tracking-[0.18em] text-bark/85;
+  }
+
+  .weight-field {
+    @apply rounded-[1.3rem] border border-white/10 bg-white/5 px-4 py-3;
+    @apply mb-2 flex items-center justify-between gap-4;
+  }
+
+  .weight-field__label {
+    @apply text-sm font-semibold uppercase tracking-[0.18em] text-bark;
+  }
+
+  .weight-field__hint {
+    @apply mt-1 text-xs text-ink/55;
+  }
+
+  .dual-range-slider {
+    @apply relative h-10;
+  }
+
+  .dual-range-slider__track,
+  .dual-range-slider__fill {
+    @apply absolute left-0 right-0 top-1/2 h-3 -translate-y-1/2 rounded-full;
+  }
+
+  .dual-range-slider__track {
+    background: rgba(255, 255, 255, 0.14);
+  }
+
+  .dual-range-slider__fill {
+    background: linear-gradient(90deg, #79c2a0 0%, #f1a15d 100%);
+  }
+
+  .dual-range-slider__input {
+    @apply pointer-events-none absolute left-0 top-1/2 h-10 w-full -translate-y-1/2 appearance-none bg-transparent;
+  }
+
+  .dual-range-slider__input::-webkit-slider-thumb {
+    appearance: none;
+    pointer-events: auto;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 9999px;
+    border: 2px solid #08111a;
+    background: #f5ead7;
+    box-shadow: 0 0 0 4px rgba(8, 17, 26, 0.28);
+    cursor: pointer;
+  }
+
+  .dual-range-slider__input::-moz-range-thumb {
+    pointer-events: auto;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 9999px;
+    border: 2px solid #08111a;
+    background: #f5ead7;
+    box-shadow: 0 0 0 4px rgba(8, 17, 26, 0.28);
+    cursor: pointer;
+  }
+
+  .dual-range-slider__input::-webkit-slider-runnable-track {
+    appearance: none;
+    background: transparent;
+  }
+
+  .dual-range-slider__input::-moz-range-track {
+    background: transparent;
+  }
+
+  .dual-range-slider__input--min {
+    z-index: 2;
+  }
+
+  .dual-range-slider__input--max {
+    z-index: 3;
   }
 }
 

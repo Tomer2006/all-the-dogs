@@ -19,6 +19,9 @@ export default function App() {
   const [query, setQuery] = useState("");
   const [minKg, setMinKg] = useState(knownMinKg);
   const [maxKg, setMaxKg] = useState(knownMaxKg);
+  const sliderSpan = knownMaxKg - knownMinKg;
+  const minPercent = ((minKg - knownMinKg) / sliderSpan) * 100;
+  const maxPercent = ((maxKg - knownMinKg) / sliderSpan) * 100;
 
   const updateMinKg = (nextValue) => {
     const safeMin = clamp(nextValue, knownMinKg, knownMaxKg);
@@ -107,52 +110,77 @@ export default function App() {
               <div className="w-full max-w-xl">
                 <div className="grid gap-4">
                   <label className="block">
-                    <div className="mb-2 flex items-center justify-between text-sm font-medium text-ink/70">
-                      <span>Minimum size</span>
-                      <input
-                        type="number"
-                        min={knownMinKg}
-                        max={knownMaxKg}
-                        step="1"
-                        value={minKg}
-                        onChange={(event) => updateMinKg(Number(event.target.value))}
-                        className="weight-number-input w-24 text-right focus:border-moss focus:ring-2 focus:ring-moss/20"
-                      />
+                    <div className="weight-field">
+                      <div>
+                        <p className="weight-field__label">Minimum size</p>
+                        <p className="weight-field__hint">Smallest breed size to include</p>
+                      </div>
+                      <div className="weight-number-wrap focus-within:border-moss focus-within:ring-2 focus-within:ring-moss/20">
+                        <input
+                          type="number"
+                          min={knownMinKg}
+                          max={knownMaxKg}
+                          step="1"
+                          value={minKg}
+                          onChange={(event) => updateMinKg(Number(event.target.value))}
+                          className="weight-number-input w-16 text-right"
+                        />
+                        <span className="weight-number-unit">kg</span>
+                      </div>
                     </div>
-                    <input
-                      type="range"
-                      min={knownMinKg}
-                      max={maxKg}
-                      step="1"
-                      value={minKg}
-                      onChange={(event) => updateMinKg(Number(event.target.value))}
-                      className="h-3 w-full cursor-pointer appearance-none rounded-full bg-white accent-moss"
-                    />
                   </label>
 
                   <label className="block">
-                    <div className="mb-2 flex items-center justify-between text-sm font-medium text-ink/70">
-                      <span>Maximum size</span>
-                      <input
-                        type="number"
-                        min={knownMinKg}
-                        max={knownMaxKg}
-                        step="1"
-                        value={maxKg}
-                        onChange={(event) => updateMaxKg(Number(event.target.value))}
-                        className="weight-number-input w-24 text-right focus:border-bark focus:ring-2 focus:ring-bark/20"
-                      />
+                    <div className="weight-field">
+                      <div>
+                        <p className="weight-field__label">Maximum size</p>
+                        <p className="weight-field__hint">Largest breed size to include</p>
+                      </div>
+                      <div className="weight-number-wrap focus-within:border-bark focus-within:ring-2 focus-within:ring-bark/20">
+                        <input
+                          type="number"
+                          min={knownMinKg}
+                          max={knownMaxKg}
+                          step="1"
+                          value={maxKg}
+                          onChange={(event) => updateMaxKg(Number(event.target.value))}
+                          className="weight-number-input w-16 text-right"
+                        />
+                        <span className="weight-number-unit">kg</span>
+                      </div>
                     </div>
+                  </label>
+
+                  <div className="dual-range-slider">
+                    <div className="dual-range-slider__track" />
+                    <div
+                      className="dual-range-slider__fill"
+                      style={{
+                        left: `${minPercent}%`,
+                        width: `${Math.max(maxPercent - minPercent, 0)}%`,
+                      }}
+                    />
                     <input
                       type="range"
-                      min={minKg}
+                      min={knownMinKg}
                       max={knownMaxKg}
                       step="1"
+                      aria-label="Minimum size"
+                      value={minKg}
+                      onChange={(event) => updateMinKg(Number(event.target.value))}
+                      className="dual-range-slider__input dual-range-slider__input--min"
+                    />
+                    <input
+                      type="range"
+                      min={knownMinKg}
+                      max={knownMaxKg}
+                      step="1"
+                      aria-label="Maximum size"
                       value={maxKg}
                       onChange={(event) => updateMaxKg(Number(event.target.value))}
-                      className="h-3 w-full cursor-pointer appearance-none rounded-full bg-white accent-bark"
+                      className="dual-range-slider__input dual-range-slider__input--max"
                     />
-                  </label>
+                  </div>
                 </div>
               </div>
             </div>
