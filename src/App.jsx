@@ -102,9 +102,6 @@ export default function App() {
                 <h3 className="mt-1 font-display text-2xl text-ink">
                   Show breeds from {minKg} kg to {maxKg} kg
                 </h3>
-                <p className="mt-2 text-sm text-ink/65">
-                  Matches any breed whose weight range overlaps your selected range.
-                </p>
               </div>
 
               <div className="w-full max-w-xl">
