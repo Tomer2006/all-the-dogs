@@ -40,13 +40,13 @@ export default function BreedCard({ breed, index }) {
 
   return (
     <article className="group mx-auto w-full max-w-[22rem] rounded-[1.6rem] border border-white/10 bg-white/5 p-2.5 shadow-soft backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-bark/30 hover:shadow-[0_28px_70px_rgba(0,0,0,0.45)] sm:max-w-none sm:rounded-[2rem] sm:p-3">
-      <div className="overflow-hidden rounded-[1.2rem] bg-cream sm:rounded-[1.5rem]">
+      <div className="aspect-square overflow-hidden rounded-[1.2rem] bg-cream sm:rounded-[1.5rem]">
         <img
           src={imageSrc}
           alt={breed.name}
           loading="lazy"
           onError={handleImageError}
-          className="h-56 w-full object-cover transition duration-700 group-hover:scale-105 sm:h-72 lg:h-80"
+          className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
         />
       </div>
       <h2 className="px-2 pb-2 pt-3 text-center font-display text-lg font-semibold tracking-tight text-ink sm:px-3 sm:pb-3 sm:pt-4 sm:text-xl">
