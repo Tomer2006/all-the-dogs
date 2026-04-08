@@ -7,11 +7,14 @@ const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
 const knownMaxKg = Math.ceil(
   Math.max(...dogBreeds.map((breed) => breed.kgMax ?? 0), 0),
 );
-const knownMinKg = Math.floor(
-  Math.min(
-    ...dogBreeds
-      .map((breed) => breed.kgMin)
-      .filter((value) => value !== null && value !== undefined),
+const knownMinKg = Math.min(
+  0,
+  Math.floor(
+    Math.min(
+      ...dogBreeds
+        .map((breed) => breed.kgMin)
+        .filter((value) => value !== null && value !== undefined),
+    ),
   ),
 );
 
@@ -212,9 +215,6 @@ export default function App() {
           ) : (
             <div className="mt-8 rounded-[2rem] border border-dashed border-white/15 bg-paper/70 px-6 py-12 text-center">
               <p className="font-display text-2xl text-ink">No breeds found</p>
-              <p className="mt-2 text-ink/65">
-                Try a different name or switch back to the full list.
-              </p>
             </div>
           )}
         </section>
