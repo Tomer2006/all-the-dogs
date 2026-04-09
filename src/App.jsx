@@ -50,8 +50,11 @@ export default function App() {
       breed.kgMin !== undefined &&
       breed.kgMax !== null &&
       breed.kgMax !== undefined;
+    // Treat 0 as the "smallest bucket", so 1kg breeds remain visible.
+    const normalizedMaxKg = maxKg === 0 ? 1 : maxKg;
     const matchesWeight =
-      !hasActiveWeightFilter || (hasKnownWeight && breed.kgMax >= minKg && breed.kgMin <= maxKg);
+      !hasActiveWeightFilter ||
+      (hasKnownWeight && breed.kgMax >= minKg && breed.kgMin <= normalizedMaxKg);
 
     return matchesQuery && matchesWeight;
   });
