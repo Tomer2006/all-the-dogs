@@ -79,7 +79,7 @@ export default function App() {
                 type="text"
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
-                placeholder="Search the breed list first... Beagle, Akita, Corgi, Husky"
+                placeholder="Beagle, Akita, Corgi, Husky"
                 className="w-full rounded-[1.75rem] border border-white/10 bg-paper/80 px-6 py-5 text-lg text-ink outline-none transition placeholder:text-ink/35 focus:border-clay focus:ring-2 focus:ring-clay/20"
               />
             </label>
