@@ -8,22 +8,6 @@ A photo-first dog breed directory built with React. Browse hundreds of breeds, s
 - [Vite](https://vitejs.dev/) 5
 - [Tailwind CSS](https://tailwindcss.com/) 3
 
-## Run locally
-
-```bash
-npm install
-npm run dev
-```
-
-Then open the URL Vite prints (usually `http://localhost:5173`).
-
-## Build for production
-
-```bash
-npm run build
-npm run preview   # optional: serve the production build locally
-```
-
 ## Project layout
 
 | Path | Purpose |
@@ -45,6 +29,3 @@ These scripts use Node and may fetch from the network. Run them when you intenti
 | `npm run sync:lifespans` | Updates life span fields in `dogBreeds.js` from CSV-backed ranges while preserving other fields. |
 | `npm run localize:images` | Downloads/processes breed images into `public/images/breeds/` (uses [sharp](https://sharp.pixelplumbing.com/)) and updates paths in `dogBreeds.js`. |
 
-## License
-
-This repository does not include a `LICENSE` file. Add one if you plan to publish or share the project.
