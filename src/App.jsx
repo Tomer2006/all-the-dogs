@@ -26,12 +26,6 @@ const sizePresets = [
   { label: "Giant", min: 55, max: knownMaxKg },
 ];
 
-const spotlightBreedsConfig = [
-  { name: "Golden Retriever" },
-  { name: "Shiba Inu" },
-  { name: "Great Dane" },
-];
-
 function getSafeNumber(value, fallback) {
   if (value === "") {
     return fallback;
@@ -90,86 +84,60 @@ export default function App() {
     [maxKg, minKg, normalizedQuery],
   );
 
-  const spotlightBreeds = useMemo(
-    () =>
-      spotlightBreedsConfig
-        .map((config) => {
-          const breed = dogBreeds.find((item) => item.name === config.name);
-          return breed ? { ...breed } : null;
-        })
-        .filter(Boolean),
-    [],
-  );
-
   return (
     <div className="min-h-screen bg-paper text-ink">
       <main className="mx-auto flex w-full max-w-[90rem] flex-col gap-7 px-4 py-5 sm:px-6 lg:px-8 lg:py-8">
         <section className="overflow-hidden rounded-lg border border-line bg-panel shadow-soft">
-          <div className="grid gap-0 lg:grid-cols-[minmax(0,1fr)_minmax(21rem,24rem)]">
-            <div className="flex flex-col gap-6 p-5 sm:p-8 lg:p-10">
-              <div>
-                <p className="eyebrow">Breed directory</p>
-                <h1 className="mt-3 max-w-3xl font-display text-4xl font-semibold leading-tight text-ink sm:text-6xl">
-                  All the Dogs
-                </h1>
-                <p className="mt-4 max-w-2xl text-base leading-7 text-muted sm:text-lg">
-                  Browse {dogBreeds.length} dog breeds with fast search, clearer
-                  size filters, local photos, weights, and life span ranges.
-                </p>
-              </div>
-
-              <label className="block max-w-3xl">
-                <span className="mb-2 block text-sm font-semibold text-ink">
-                  Search by breed name
-                </span>
-                <div className="search-field">
-                  <svg
-                    aria-hidden="true"
-                    className="h-5 w-5 shrink-0 text-bark"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path
-                      d="m21 21-4.3-4.3m1.3-5.2a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Z"
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                    />
-                  </svg>
-                  <input
-                    type="search"
-                    value={query}
-                    onChange={(event) => setQuery(event.target.value)}
-                    placeholder="Try Beagle, Akita, Corgi, Husky"
-                    className="min-w-0 flex-1 bg-transparent py-4 text-base text-ink outline-none placeholder:text-muted/75"
-                  />
-                </div>
-              </label>
-
-              <div className="grid max-w-3xl gap-3 text-sm text-muted sm:grid-cols-2">
-                <div className="stat-tile">
-                  <span className="stat-tile__value">{dogBreeds.length}</span>
-                  breeds
-                </div>
-                <div className="stat-tile">
-                  <span className="stat-tile__value">{knownMaxKg} kg</span>
-                  largest listed size
-                </div>
-              </div>
+          <div className="flex flex-col gap-6 p-5 sm:p-8 lg:p-10">
+            <div>
+              <p className="eyebrow">Breed directory</p>
+              <h1 className="mt-3 max-w-3xl font-display text-4xl font-semibold leading-tight text-ink sm:text-6xl">
+                All the Dogs
+              </h1>
+              <p className="mt-4 max-w-2xl text-base leading-7 text-muted sm:text-lg">
+                Browse {dogBreeds.length} dog breeds with fast search, clearer
+                size filters, local photos, weights, and life span ranges.
+              </p>
             </div>
 
-            <div className="grid content-start gap-3 border-t border-line bg-paper/45 p-3 lg:border-l lg:border-t-0">
-              {spotlightBreeds.map((breed) => (
-                <figure key={breed.name} className="spotlight-card">
-                  <img
-                    src={breed.image}
-                    alt=""
-                    className="spotlight-card__image"
+            <label className="block max-w-3xl">
+              <span className="mb-2 block text-sm font-semibold text-ink">
+                Search by breed name
+              </span>
+              <div className="search-field">
+                <svg
+                  aria-hidden="true"
+                  className="h-5 w-5 shrink-0 text-bark"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="m21 21-4.3-4.3m1.3-5.2a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Z"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                   />
-                  <figcaption>{breed.name}</figcaption>
-                </figure>
-              ))}
+                </svg>
+                <input
+                  type="search"
+                  value={query}
+                  onChange={(event) => setQuery(event.target.value)}
+                  placeholder="Try Beagle, Akita, Corgi, Husky"
+                  className="min-w-0 flex-1 bg-transparent py-4 text-base text-ink outline-none placeholder:text-muted/75"
+                />
+              </div>
+            </label>
+
+            <div className="grid max-w-3xl gap-3 text-sm text-muted sm:grid-cols-2">
+              <div className="stat-tile">
+                <span className="stat-tile__value">{dogBreeds.length}</span>
+                breeds
+              </div>
+              <div className="stat-tile">
+                <span className="stat-tile__value">{knownMaxKg} kg</span>
+                largest listed size
+              </div>
             </div>
           </div>
         </section>
