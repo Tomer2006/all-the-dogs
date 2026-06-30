@@ -4,19 +4,25 @@ export default {
   theme: {
     extend: {
       colors: {
-        paper: "#08111a",
-        ink: "#f5ead7",
-        bark: "#f1a15d",
-        clay: "#ffbf7a",
-        cream: "#122232",
-        moss: "#79c2a0",
+        paper: "#101820",
+        panel: "#17212c",
+        card: "#202b35",
+        line: "rgba(255, 246, 232, 0.12)",
+        ink: "#fff6e8",
+        muted: "#b9c3bd",
+        bark: "#f7a854",
+        clay: "#d9794a",
+        cream: "#263645",
+        moss: "#7dbf9d",
       },
       fontFamily: {
         display: ['"Georgia"', '"Times New Roman"', "serif"],
         sans: ['"Segoe UI"', "Tahoma", "Geneva", "sans-serif"],
       },
       boxShadow: {
-        soft: "0 30px 80px rgba(0, 0, 0, 0.35)",
+        soft: "0 18px 50px rgba(0, 0, 0, 0.28)",
+        card: "0 14px 32px rgba(0, 0, 0, 0.22)",
+        cardHover: "0 20px 42px rgba(0, 0, 0, 0.32)",
       },
       backgroundImage: {
         glow:
