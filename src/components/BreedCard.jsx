@@ -46,7 +46,7 @@ export default function BreedCard({ breed, index }) {
           alt={breed.name}
           loading="lazy"
           onError={handleImageError}
-          className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+          className="h-full w-full object-contain"
         />
       </div>
       <h2 className="px-2 pb-2 pt-3 text-center font-display text-lg font-semibold tracking-tight text-ink sm:px-3 sm:pb-3 sm:pt-4 sm:text-xl">
